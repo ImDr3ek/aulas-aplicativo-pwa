@@ -2,7 +2,7 @@
 import './App.css'
 import Cabecalho from './componentes/cabecalho/cabecalho'
 import Principal from './componentes/principal/Principal'
-import Rodapé from './componentes/Rodape/Rodape'
+import Rodape from './componentes/Rodape/Rodape'
 
 function App() {
   return (
@@ -10,7 +10,6 @@ function App() {
       <Cabecalho />
       <Principal />
       <Rodape />
-
     </div>
   )
 }
