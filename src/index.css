@@ -1,19 +1,17 @@
 * {
- 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-
-html, body, #root {
-
-height: 100%;
-
+html,
+body,
+#root {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
-#root{ 
+#root {
     display: grid;
     grid-template-rows: 48px 1fr 48px;
 }
@@ -39,4 +37,3 @@ height: 100%;
 
     --cor-cinza: #99a7bb;
 }
-

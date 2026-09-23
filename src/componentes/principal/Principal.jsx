@@ -1,6 +1,5 @@
-function Principal(){
-    return <main>Conteudo Principal</main>
+function Principal() {
+    return <main>Conteúdo principal</main>
 }
-
 
 export default Principal

@@ -1,17 +1,16 @@
-
-import './App.css'
-import Cabecalho from './componentes/cabecalho/cabecalho'
-import Principal from './componentes/principal/Principal'
-import Rodape from './componentes/Rodape/Rodape'
+import "./App.css";
+import Cabecalho from "./componentes/Cabecalho/Cabecalho";
+import Principal from "./componentes/Principal/Principal";
+import Rodape from "./componentes/Rodape/Rodape";
 
 function App() {
   return (
-    <div>
+    <>
       <Cabecalho />
       <Principal />
       <Rodape />
-    </div>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;
