@@ -1,13 +1,13 @@
 import "./App.css";
 import Cabecalho from "./componentes/Cabecalho/Cabecalho";
-import Principal from "./componentes/Principal/Principal";
 import Rodape from "./componentes/Rodape/Rodape";
+import Roteador from "./Roteador";
 
 function App() {
   return (
     <>
       <Cabecalho />
-      <Principal />
+      <Roteador />
       <Rodape />
     </>
   );
