@@ -5,11 +5,12 @@ import CamposCustomizados from "../../componentes/CamposCustomizados/CamposCusto
 import { FaRegTrashAlt } from "react-icons/fa";
 import "./PaginaListaTarefas.css"
 import { GiSwordClash } from "react-icons/gi";
-
+import { buscarNoLocalStorage, salvarNoLocalStorage } from "../../servicos/LocalStorage.servicos";
+import { toast } from 'react-toastify';
 
 function PaginaListaTarefas() {
   const [descricaoTarefa, setDescricaoTarefa] = useState("");
-  const [tarefas, setTarefas] = useState([]);
+  const [tarefas, setTarefas] = useState(buscarNoLocalStorage("tarefas") || []);
 
   const adicionarTarefa = () => {
     if (descricaoTarefa.trim()) {
@@ -19,8 +20,15 @@ function PaginaListaTarefas() {
       }
       setTarefas([...tarefas, novaTarefa]);
       setDescricaoTarefa("");
+      toast.success("Tarefa adicionada",
+     {autoClose:3000,
+      closeOnClick: true});
+      salvarNoLocalStorage("tarefas", [...tarefas, novaTarefa])
     }else{
-      alert("Tarefa Obrigatoria")
+   toast.error("Preencha o campo tarefas!",
+     {autoClose:3000,
+      closeOnClick: true});
+
     }
   };
 
@@ -28,6 +36,7 @@ const removerTarefa = (id) => {
   if(confirm("Are u sure?")){
     const tarefasAtualizadas = tarefas.filter((item) => item.id != id);
     setTarefas(tarefasAtualizadas);
+    salvarNoLocalStorage("tarefas", tarefasAtualizadas)
   }
 
 };

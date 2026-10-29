@@ -21,6 +21,13 @@ function PaginaInicial() {
       >
         Lista de Tarefas
       </BotaoCustomizado>
+
+      <BotaoCustomizado
+        tipo="primario"
+        aoClicar={() => navigate("/cadastro-cliente")}
+      >
+      Cadastro de Clientes
+      </BotaoCustomizado>
     </Principal>
   );
 }
