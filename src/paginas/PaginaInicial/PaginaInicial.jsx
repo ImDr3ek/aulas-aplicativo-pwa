@@ -17,7 +17,7 @@ function PaginaInicial() {
 
       <BotaoCustomizado
         tipo="secundario"
-        aoClicar={() => navigate("/fuscao-preto")}
+        aoClicar={() => navigate("/lista-tarefas")}
       >
         Lista de Tarefas
       </BotaoCustomizado>
@@ -26,7 +26,14 @@ function PaginaInicial() {
         tipo="primario"
         aoClicar={() => navigate("/cadastro-cliente")}
       >
-      Cadastro de Clientes
+        Cadastro de Cliente
+      </BotaoCustomizado>
+
+      <BotaoCustomizado
+        tipo="secundario"
+        aoClicar={() => navigate("/lista-clientes")}
+      >
+        Lista de Clientes
       </BotaoCustomizado>
     </Principal>
   );

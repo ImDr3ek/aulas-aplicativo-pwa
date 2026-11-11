@@ -16,7 +16,7 @@ body,
     grid-template-rows: 48px 1fr 48px;
 }
 
-a { 
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -41,5 +41,4 @@ a {
     --cor-erro: #eb0014;
 
     --cor-cinza: #99a7bb;
-}    
-
+}
